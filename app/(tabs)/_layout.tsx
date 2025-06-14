@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import { Platform } from 'react-native';
-import { Chrome as Home, Briefcase, GraduationCap, Wrench, User, Search } from 'lucide-react-native';
+import { Chrome as Home, Briefcase, GraduationCap, Wrench, User, PlayCircle } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
@@ -33,6 +33,15 @@ export default function TabLayout() {
           title: 'Dashboard',
           tabBarIcon: ({ size, color }) => (
             <Home size={size} color={color} strokeWidth={2} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="feed"
+        options={{
+          title: 'Feed',
+          tabBarIcon: ({ size, color }) => (
+            <PlayCircle size={size} color={color} strokeWidth={2} />
           ),
         }}
       />
